@@ -20,11 +20,10 @@ Requires macOS 15 or later.
 
 1. Download `SoundPath.dmg` from the [latest release](https://github.com/ismail61300/soundpath/releases/latest)
    and drag SoundPath to Applications.
-2. The app is not notarized by Apple. On first launch, right-click SoundPath → **Open** → **Open**.
-   If macOS still refuses: `xattr -dr com.apple.quarantine /Applications/SoundPath.app`.
-3. Follow the tour; the last page asks for the audio permission.
+2. Follow the tour; the last page asks for the audio permission.
 
-Because releases are ad-hoc signed, macOS may ask for the permissions again after an update.
+Releases are signed with a Developer ID certificate and notarized by Apple, so macOS opens them normally
+and keeps the permissions across updates.
 
 ## Permissions
 
@@ -55,7 +54,7 @@ open SoundPath.xcodeproj   # ⌘R
 Run `xcodegen generate` again after pulling changes that add files.
 Tests: `⌘U`, or `xcodebuild -project SoundPath.xcodeproj -scheme SoundPath -destination 'platform=macOS' test`.
 
-`tools/release.sh` runs the tests, builds Release, signs, and writes `dist/SoundPath.dmg`. With a
+`tools/release.sh` runs the tests, builds Release, signs, notarizes, and writes `dist/SoundPath.dmg`. With a
 "Developer ID Application" certificate in the keychain it signs with it; to notarize, store credentials once:
 
 ```sh
