@@ -94,3 +94,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Report vulnerabilities privately as desc
 ## License
 
 [MIT](LICENSE)
+
+SoundPath is an independent, free, non-commercial open-source project. It is not affiliated with, or endorsed
+by, any company or product with a similar name. All product names mentioned belong to their owners.
