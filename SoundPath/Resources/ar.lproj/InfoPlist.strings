@@ -1,0 +1,3 @@
+/* SoundPath permission strings. */
+
+"NSAudioCaptureUsageDescription" = "يلتقط SoundPath صوت التطبيقات محليًا للتحكم في مستوى الصوت والمؤثرات لكل تطبيق.";

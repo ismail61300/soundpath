@@ -1,0 +1,3 @@
+/* SoundPath permission strings. */
+
+"NSAudioCaptureUsageDescription" = "SoundPath 在本地捕获应用音频，以控制每个应用的音量和效果。";

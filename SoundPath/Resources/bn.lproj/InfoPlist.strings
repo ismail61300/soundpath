@@ -1,0 +1,3 @@
+/* SoundPath permission strings. */
+
+"NSAudioCaptureUsageDescription" = "প্রতিটি অ্যাপের ভলিউম ও ইফেক্ট নিয়ন্ত্রণ করতে SoundPath স্থানীয়ভাবে অ্যাপের অডিও ক্যাপচার করে।";

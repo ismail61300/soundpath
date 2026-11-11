@@ -1,0 +1,3 @@
+/* SoundPath permission strings. */
+
+"NSAudioCaptureUsageDescription" = "SoundPath, uygulama bazlı ses düzeyi ve efektleri kontrol etmek için uygulama sesini yerel olarak yakalar.";

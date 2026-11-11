@@ -1,0 +1,3 @@
+/* SoundPath permission strings. */
+
+"NSAudioCaptureUsageDescription" = "SoundPath ہر ایپ کے والیوم اور ایفیکٹس کو کنٹرول کرنے کے لیے ایپ آڈیو کو مقامی طور پر کیپچر کرتا ہے۔";
