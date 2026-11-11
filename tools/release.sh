@@ -11,10 +11,13 @@ xcodegen generate >/dev/null
 echo "== tests"
 xcodebuild test -project SoundPath.xcodeproj -scheme SoundPath -destination 'platform=macOS' -quiet
 echo "== release build"
-rm -rf build dist
+# Build outside the project: iCloud-synced folders (Desktop/Documents) add xattrs that break codesign.
+BUILD=$(mktemp -d)
+trap 'rm -rf "$BUILD"' EXIT
+rm -rf dist
 xcodebuild -project SoundPath.xcodeproj -scheme SoundPath -configuration Release \
-  -destination 'platform=macOS' -derivedDataPath build CODE_SIGNING_ALLOWED=NO build -quiet
-APP=build/Build/Products/Release/SoundPath.app
+  -destination 'platform=macOS' -derivedDataPath "$BUILD" CODE_SIGNING_ALLOWED=NO build -quiet
+APP="$BUILD/Build/Products/Release/SoundPath.app"
 
 xattr -cr "$APP"
 IDENTITY="${SIGN_IDENTITY:-$(security find-identity -v -p codesigning | sed -n 's/.*"\(Developer ID Application:[^"]*\)".*/\1/p' | head -1)}"
@@ -28,11 +31,10 @@ fi
 codesign --verify --deep --strict "$APP"
 
 echo "== dmg"
-mkdir -p dist/dmg
-cp -R "$APP" dist/dmg/
-ln -s /Applications dist/dmg/Applications
-hdiutil create -volname SoundPath -srcfolder dist/dmg -ov -format UDZO dist/SoundPath.dmg >/dev/null
-rm -rf dist/dmg
+mkdir -p dist "$BUILD/dmg"
+cp -R "$APP" "$BUILD/dmg/"
+ln -s /Applications "$BUILD/dmg/Applications"
+hdiutil create -volname SoundPath -srcfolder "$BUILD/dmg" -ov -format UDZO dist/SoundPath.dmg >/dev/null
 
 if [ -n "$IDENTITY" ] && xcrun notarytool history --keychain-profile soundpath-notary >/dev/null 2>&1; then
   echo "== notarizing"
