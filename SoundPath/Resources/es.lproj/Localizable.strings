@@ -216,3 +216,12 @@
 "onb.next" = "Continuar";
 "onb.back" = "Atrás";
 "onb.done" = "Empezar";
+"set.update" = "Actualizaciones";
+"set.update.auto" = "Buscar actualizaciones a diario";
+"set.update.check" = "Buscar ahora";
+"set.update.checking" = "Buscando…";
+"set.update.uptodate" = "SoundPath está actualizado";
+"set.update.available" = "Versión %@ disponible";
+"set.update.download" = "Descargar";
+"set.update.failed" = "No se pudo buscar actualizaciones";
+"set.update.note" = "Solo se conecta a github.com cuando buscas. No se envía nada más.";

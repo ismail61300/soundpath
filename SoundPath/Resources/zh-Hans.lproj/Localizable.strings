@@ -216,3 +216,12 @@
 "onb.next" = "继续";
 "onb.back" = "返回";
 "onb.done" = "开始使用";
+"set.update" = "更新";
+"set.update.auto" = "每天检查更新";
+"set.update.check" = "立即检查";
+"set.update.checking" = "正在检查…";
+"set.update.uptodate" = "SoundPath 已是最新版本";
+"set.update.available" = "有新版本 %@ 可用";
+"set.update.download" = "下载";
+"set.update.failed" = "无法检查更新";
+"set.update.note" = "仅在检查时连接 github.com，不会发送其他任何内容。";

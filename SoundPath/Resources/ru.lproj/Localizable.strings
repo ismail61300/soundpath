@@ -216,3 +216,12 @@
 "onb.next" = "Далее";
 "onb.back" = "Назад";
 "onb.done" = "Начать";
+"set.update" = "Обновления";
+"set.update.auto" = "Проверять обновления ежедневно";
+"set.update.check" = "Проверить сейчас";
+"set.update.checking" = "Проверка…";
+"set.update.uptodate" = "SoundPath обновлён";
+"set.update.available" = "Доступна версия %@";
+"set.update.download" = "Скачать";
+"set.update.failed" = "Не удалось проверить обновления";
+"set.update.note" = "Обращается к github.com только при проверке. Больше ничего не отправляется.";

@@ -12,6 +12,8 @@ enum PrefKey {
     static let softwareVolume = "pref.softwareVolume"
     static let stripColumns = "pref.stripColumns"
     static let onboardingDone = "pref.onboardingDone"
+    static let updateAuto = "pref.updateCheckDaily"
+    static let updateLastCheck = "pref.updateLastCheck"
     /// Set once System Audio Recording was granted (the system gives no reliable way to read it back).
     static let audioPermissionGranted = "pref.audioPermissionGranted"
 }

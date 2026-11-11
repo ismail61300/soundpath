@@ -1,6 +1,7 @@
 # Security
 
-SoundPath makes no network connections and ships no third-party code. It does read system audio and,
+SoundPath ships no third-party code. Its only network request is the optional update check against the
+GitHub releases API. It does read system audio and,
 optionally, the microphone level, so a vulnerability report matters.
 
 Report issues privately through GitHub: **Security → Report a vulnerability** on this repository.

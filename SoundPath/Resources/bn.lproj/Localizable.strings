@@ -216,3 +216,12 @@
 "onb.next" = "চালিয়ে যান";
 "onb.back" = "পিছনে";
 "onb.done" = "শুরু করুন";
+"set.update" = "আপডেট";
+"set.update.auto" = "প্রতিদিন আপডেট দেখুন";
+"set.update.check" = "এখনই দেখুন";
+"set.update.checking" = "দেখা হচ্ছে…";
+"set.update.uptodate" = "SoundPath আপ টু ডেট";
+"set.update.available" = "সংস্করণ %@ পাওয়া যাচ্ছে";
+"set.update.download" = "ডাউনলোড";
+"set.update.failed" = "আপডেট দেখা যায়নি";
+"set.update.note" = "শুধু যাচাই করার সময় github.com-এ যোগাযোগ করে। অন্য কিছু পাঠানো হয় না।";

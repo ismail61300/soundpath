@@ -54,7 +54,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             if visible { self.model.system.refresh(); self.model.system.refreshAlertVolume() }
         }
         panel = controller
-
+        Task { await UpdateChecker.shared.checkIfDue() }
 
         // Super Volume Keys: software volume for devices without hardware volume.
         mediaKeys.shouldHandle = { [weak self] in

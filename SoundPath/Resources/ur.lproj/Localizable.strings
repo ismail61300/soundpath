@@ -216,3 +216,12 @@
 "onb.next" = "جاری رکھیں";
 "onb.back" = "واپس";
 "onb.done" = "شروع کریں";
+"set.update" = "اپ ڈیٹس";
+"set.update.auto" = "روزانہ اپ ڈیٹس چیک کریں";
+"set.update.check" = "ابھی چیک کریں";
+"set.update.checking" = "چیک ہو رہا ہے…";
+"set.update.uptodate" = "SoundPath تازہ ترین ہے";
+"set.update.available" = "ورژن %@ دستیاب ہے";
+"set.update.download" = "ڈاؤن لوڈ";
+"set.update.failed" = "اپ ڈیٹس چیک نہیں ہو سکیں";
+"set.update.note" = "صرف چیک کرنے پر github.com سے رابطہ کرتا ہے۔ اور کچھ نہیں بھیجا جاتا۔";

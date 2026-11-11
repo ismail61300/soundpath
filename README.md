@@ -1,7 +1,7 @@
 # SoundPath
 
 A free, open-source volume mixer for the Mac menu bar. Set the volume of every app separately, add
-effects, and route apps to different outputs. No account, no network access, no third-party code.
+effects, and route apps to different outputs. No account, no tracking, no third-party code.
 
 ## Features
 
@@ -11,6 +11,7 @@ effects, and route apps to different outputs. No account, no network access, no 
 - **Effects** for any app or the master output: Volume Overdrive (peak-limited), 10-band parametric EQ
   (presets, AutoEQ / Equalizer APO import), Boost (dynamics), output Balance.
 - **Audio Devices window**: nicknames, icons, hide, max volume, channel routing, sample rate.
+- Optional update check against GitHub Releases (off by default).
 - Global show/hide shortcut, optional Super Volume Keys (media keys control the output volume),
   light/dark theme, accent colour, 3–5 faders per row, 11 languages, first-launch tour.
 
@@ -33,7 +34,10 @@ and keeps the permissions across updates.
 | Microphone | Only to show the live input level, while a panel is on screen. |
 | Accessibility | Only for Super Volume Keys (media-key tap). Optional. |
 
-SoundPath never records or stores audio and makes no network connections.
+SoundPath never records or stores audio. Its only network request is the optional update check
+(Settings → Updates): one HTTPS call to the GitHub releases API, when you press *Check Now* or, if you
+turned it on, once a day. Nothing is sent besides the request itself, and nothing is downloaded or
+installed automatically.
 
 ## How it works, and its limits
 

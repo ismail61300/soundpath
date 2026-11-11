@@ -216,3 +216,12 @@
 "onb.next" = "Devam";
 "onb.back" = "Geri";
 "onb.done" = "Başla";
+"set.update" = "Güncellemeler";
+"set.update.auto" = "Güncellemeleri günlük kontrol et";
+"set.update.check" = "Şimdi Kontrol Et";
+"set.update.checking" = "Kontrol ediliyor…";
+"set.update.uptodate" = "SoundPath güncel";
+"set.update.available" = "%@ sürümü mevcut";
+"set.update.download" = "İndir";
+"set.update.failed" = "Güncellemeler kontrol edilemedi";
+"set.update.note" = "Yalnızca kontrol ettiğinde github.com'a bağlanır. Başka hiçbir şey gönderilmez.";

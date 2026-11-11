@@ -216,3 +216,12 @@
 "onb.next" = "متابعة";
 "onb.back" = "رجوع";
 "onb.done" = "ابدأ";
+"set.update" = "التحديثات";
+"set.update.auto" = "التحقق من التحديثات يوميًا";
+"set.update.check" = "تحقق الآن";
+"set.update.checking" = "جارٍ التحقق…";
+"set.update.uptodate" = "SoundPath محدَّث";
+"set.update.available" = "الإصدار %@ متاح";
+"set.update.download" = "تنزيل";
+"set.update.failed" = "تعذّر التحقق من التحديثات";
+"set.update.note" = "يتصل بـ github.com فقط عند التحقق. لا يُرسل أي شيء آخر.";

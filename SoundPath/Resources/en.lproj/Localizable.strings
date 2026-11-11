@@ -216,3 +216,12 @@
 "onb.next" = "Continue";
 "onb.back" = "Back";
 "onb.done" = "Get started";
+"set.update" = "Updates";
+"set.update.auto" = "Check for updates daily";
+"set.update.check" = "Check Now";
+"set.update.checking" = "Checking…";
+"set.update.uptodate" = "SoundPath is up to date";
+"set.update.available" = "Version %@ is available";
+"set.update.download" = "Download";
+"set.update.failed" = "Couldn't check for updates";
+"set.update.note" = "Contacts github.com only when you check. Nothing else is sent.";

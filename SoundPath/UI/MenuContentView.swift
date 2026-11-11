@@ -86,6 +86,10 @@ struct MenuContentView: View {
                 model.panelPinned.toggle()
             }
             Menu {
+                if case .available(let version, let url) = UpdateChecker.shared.state {
+                    Button(L("set.update.available", version)) { NSWorkspace.shared.open(url) }
+                    Divider()
+                }
                 Button(L("set.openMenu")) { openSettings() }
                     .keyboardShortcut(",")
                 Button(L("menu.permissions")) { AudioCapturePermission.openSystemSettings() }

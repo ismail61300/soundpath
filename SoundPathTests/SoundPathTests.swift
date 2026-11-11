@@ -97,3 +97,20 @@ final class PluginDescriptionTests: XCTestCase {
         XCTAssertFalse(a.isSamePlugin(as: b))
     }
 }
+
+final class UpdateCheckerTests: XCTestCase {
+    func testVersionComparison() {
+        XCTAssertTrue(UpdateChecker.isNewer("0.2.0", than: "0.1.0"))
+        XCTAssertTrue(UpdateChecker.isNewer("v1.10", than: "1.9.5"))
+        XCTAssertTrue(UpdateChecker.isNewer("0.1.0.1", than: "0.1.0"))
+        XCTAssertFalse(UpdateChecker.isNewer("0.1.0", than: "0.1.0"))
+        XCTAssertFalse(UpdateChecker.isNewer("0.0.9", than: "0.1.0"))
+    }
+
+    func testRejectsMalformedVersions() {
+        XCTAssertFalse(UpdateChecker.isNewer("latest", than: "0.1.0"))
+        XCTAssertFalse(UpdateChecker.isNewer("9.9.9-beta", than: "0.1.0"))
+        XCTAssertFalse(UpdateChecker.isNewer("", than: "0.1.0"))
+        XCTAssertFalse(UpdateChecker.isNewer("1..2", than: "0.1.0"))
+    }
+}

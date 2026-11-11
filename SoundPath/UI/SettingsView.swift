@@ -25,6 +25,8 @@ private struct GeneralTab: View {
     @AppStorage(PrefKey.superKeys) private var superKeys = false
     @AppStorage(PrefKey.stripColumns) private var columns = 4
     @AppStorage(PrefKey.shortcut) private var shortcutJSON = ""
+    @AppStorage(PrefKey.updateAuto) private var updateAuto = false
+    private let updates = UpdateChecker.shared
     @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
     @State private var trusted = MediaKeyTap.isTrusted
 
@@ -65,6 +67,25 @@ private struct GeneralTab: View {
                 Text(L("set.superKeys.desc"))
             }
 
+            Section {
+                Toggle(L("set.update.auto"), isOn: $updateAuto)
+                LabeledContent {
+                    switch updates.state {
+                    case .available(_, let url):
+                        Button(L("set.update.download")) { NSWorkspace.shared.open(url) }
+                    default:
+                        Button(L("set.update.check")) { Task { await updates.check() } }
+                            .disabled(updates.state == .checking)
+                    }
+                } label: {
+                    Text(updateStatus).foregroundStyle(.secondary)
+                }
+            } header: {
+                Text(L("set.update"))
+            } footer: {
+                Text(L("set.update.note"))
+            }
+
             Section(L("set.tab.appearance")) {
                 Picker(L("set.theme"), selection: $theme) {
                     ForEach(ThemeChoice.allCases) { choice in
@@ -100,6 +121,16 @@ private struct GeneralTab: View {
         .scrollDisabled(true)
         .onReceive(Timer.publish(every: 1.5, on: .main, in: .common).autoconnect()) { _ in
             trusted = MediaKeyTap.isTrusted
+        }
+    }
+
+    private var updateStatus: String {
+        switch updates.state {
+        case .idle: return L("set.version") + " " + UpdateChecker.currentVersion
+        case .checking: return L("set.update.checking")
+        case .upToDate: return L("set.update.uptodate")
+        case .available(let version, _): return L("set.update.available", version)
+        case .failed: return L("set.update.failed")
         }
     }
 
