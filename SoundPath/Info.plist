@@ -19,18 +19,18 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.1.0</string>
+	<string>0.2.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAudioCaptureUsageDescription</key>
 	<string>SoundPath needs to capture app audio to control per-app volume and effects.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>SoundPath shows the live input level of your microphone in the Audio Devices window.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>© 2026 SoundPath</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>SoundPath shows the live input level of your microphone in the Audio Devices window.</string>
 </dict>
 </plist>
